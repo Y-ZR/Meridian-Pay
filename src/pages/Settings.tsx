@@ -18,7 +18,8 @@ export default function Settings() {
   };
 
   return (
-    <main className="mx-auto min-h-screen max-w-4xl px-6 py-8 space-y-6">
+    <main className="min-h-screen py-8">
+      <div className="mx-auto max-w-7xl px-6 space-y-6">
       <header>
         <h1 className="text-3xl font-bold tracking-tight">Settings</h1>
         <p className="text-muted-foreground mt-1">
@@ -148,6 +149,7 @@ export default function Settings() {
           <Button variant="outline">Cancel</Button>
           <Button onClick={handleSave}>Save Changes</Button>
         </div>
+      </div>
       </div>
     </main>
   );

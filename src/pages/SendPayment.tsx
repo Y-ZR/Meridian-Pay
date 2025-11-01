@@ -73,7 +73,8 @@ export default function SendPayment() {
   };
 
   return (
-    <main className="mx-auto min-h-screen max-w-4xl px-6 py-8 space-y-6">
+    <main className="min-h-screen py-8">
+      <div className="mx-auto max-w-7xl px-6 space-y-6">
       <header>
         <h1 className="text-3xl font-bold tracking-tight">Send Payment</h1>
         <p className="text-muted-foreground mt-1">
@@ -82,7 +83,7 @@ export default function SendPayment() {
       </header>
 
       {/* Progress Steps */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-center">
         {[
           { num: 1, label: 'Payment Details' },
           { num: 2, label: 'Review Quote' },
@@ -91,16 +92,16 @@ export default function SendPayment() {
           <div key={s.num} className="flex items-center">
             <div className="flex items-center gap-3">
               <div
-                className={`flex h-10 w-10 items-center justify-center rounded-full border-2 font-semibold transition-all ${
+                className={`flex h-12 w-12 items-center justify-center rounded-full border-2 font-semibold text-base transition-all ${
                   step >= s.num
-                    ? 'border-accent bg-accent text-accent-foreground'
-                    : 'border-border bg-background text-muted-foreground'
+                    ? 'border-primary bg-primary text-primary-foreground shadow-sm'
+                    : 'border-muted-foreground/30 bg-background text-muted-foreground'
                 }`}
               >
-                {step > s.num ? <CheckCircle2 className="h-5 w-5" /> : s.num}
+                {step > s.num ? <CheckCircle2 className="h-6 w-6" /> : s.num}
               </div>
               <span
-                className={`hidden md:block text-sm font-medium ${
+                className={`text-sm font-medium whitespace-nowrap ${
                   step >= s.num ? 'text-foreground' : 'text-muted-foreground'
                 }`}
               >
@@ -109,8 +110,8 @@ export default function SendPayment() {
             </div>
             {i < 2 && (
               <div
-                className={`mx-4 h-0.5 w-16 md:w-24 ${
-                  step > s.num ? 'bg-accent' : 'bg-border'
+                className={`mx-4 h-0.5 w-20 transition-colors ${
+                  step > s.num ? 'bg-primary' : 'bg-muted-foreground/30'
                 }`}
               />
             )}
@@ -356,6 +357,7 @@ export default function SendPayment() {
           </CardContent>
         </Card>
       )}
+      </div>
     </main>
   );
 }

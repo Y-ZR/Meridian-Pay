@@ -17,7 +17,8 @@ export default function PaymentDetail() {
   
   if (!payment) {
     return (
-      <main className="mx-auto min-h-screen max-w-4xl px-6 py-8">
+      <main className="min-h-screen py-8">
+        <div className="mx-auto max-w-7xl px-6">
         <div className="flex min-h-[400px] flex-col items-center justify-center gap-3 text-center">
           <h2 className="text-2xl font-bold">Payment Not Found</h2>
           <p className="text-muted-foreground">
@@ -29,6 +30,7 @@ export default function PaymentDetail() {
               Back to Payments
             </Button>
           </Link>
+        </div>
         </div>
       </main>
     );
@@ -46,7 +48,8 @@ export default function PaymentDetail() {
   };
 
   return (
-    <main className="mx-auto min-h-screen max-w-4xl px-6 py-8 space-y-6">
+    <main className="min-h-screen py-8">
+      <div className="mx-auto max-w-7xl px-6 space-y-6">
       <header className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Link to="/payments">
@@ -227,6 +230,7 @@ export default function PaymentDetail() {
             </CardContent>
           </Card>
         </div>
+      </div>
       </div>
     </main>
   );

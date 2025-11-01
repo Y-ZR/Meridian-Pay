@@ -14,43 +14,48 @@ export function Navigation() {
   ];
   
   return (
-    <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <div className="flex items-center gap-8">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+    <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+      <div className="mx-auto grid h-16 max-w-7xl grid-cols-3 items-center px-6">
+        {/* Left: Logo */}
+        <div className="flex items-center">
+          <Link to="/" className="flex items-center gap-2.5 transition-opacity hover:opacity-80">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary shadow-sm">
               <ArrowUpRight className="h-5 w-5 text-primary-foreground" />
             </div>
-            <span className="text-xl font-semibold">Meridian</span>
+            <span className="text-xl font-semibold tracking-tight">Meridian</span>
           </Link>
-          
-          <div className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = location.pathname === item.href;
-              
-              return (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className={cn(
-                    'flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                    isActive
-                      ? 'bg-secondary text-foreground'
-                      : 'text-muted-foreground hover:bg-secondary/50 hover:text-foreground'
-                  )}
-                >
-                  <Icon className="h-4 w-4" />
-                  {item.label}
-                </Link>
-              );
-            })}
-          </div>
         </div>
-        
-        <Button asChild>
-          <Link to="/send">Send Payment</Link>
-        </Button>
+
+        {/* Center: Navigation Items */}
+        <div className="hidden md:flex items-center justify-center gap-1">
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = location.pathname === item.href;
+            
+            return (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={cn(
+                  'flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all',
+                  isActive
+                    ? 'bg-secondary text-foreground shadow-sm'
+                    : 'text-muted-foreground hover:bg-secondary/50 hover:text-foreground'
+                )}
+              >
+                <Icon className="h-4 w-4" />
+                {item.label}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Right: Action Button */}
+        <div className="flex items-center justify-end">
+          <Button asChild size="default" className="shadow-sm">
+            <Link to="/send">Send Payment</Link>
+          </Button>
+        </div>
       </div>
     </nav>
   );

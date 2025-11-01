@@ -101,7 +101,8 @@ export default function Beneficiaries() {
   };
 
   return (
-    <main className="mx-auto min-h-screen max-w-7xl px-6 py-8 space-y-6">
+    <main className="min-h-screen py-8">
+      <div className="mx-auto max-w-7xl px-6 space-y-6">
       <header className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Beneficiaries</h1>
@@ -293,6 +294,7 @@ export default function Beneficiaries() {
           )}
         </CardContent>
       </Card>
+      </div>
     </main>
   );
 }

@@ -33,7 +33,8 @@ export default function Dashboard() {
   };
 
   return (
-    <main className="mx-auto min-h-screen max-w-7xl px-6 py-8 space-y-8">
+    <main className="min-h-screen py-8">
+      <div className="mx-auto max-w-7xl px-6 space-y-8">
       <header className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
@@ -140,6 +141,7 @@ export default function Dashboard() {
           )}
         </CardContent>
       </Card>
+      </div>
     </main>
   );
 }
