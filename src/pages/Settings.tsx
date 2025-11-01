@@ -18,7 +18,7 @@ export default function Settings() {
   };
 
   return (
-    <main className="min-h-screen py-8">
+    <main className="py-8">
       <div className="mx-auto max-w-7xl px-6 space-y-6">
       <header>
         <h1 className="text-3xl font-bold tracking-tight">Settings</h1>

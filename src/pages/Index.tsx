@@ -1,4 +1,4 @@
-import Dashboard from './Dashboard';
+import Landing from './Landing';
 
-// Re-export Dashboard as Index for the root route
-export default Dashboard;
+// Re-export Landing as Index for the root route
+export default Landing;

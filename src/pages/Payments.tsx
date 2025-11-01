@@ -62,7 +62,7 @@ export default function Payments() {
   };
 
   return (
-    <main className="min-h-screen py-8">
+    <main className="py-8">
       <div className="mx-auto max-w-7xl px-6 space-y-6">
       <header className="flex items-center justify-between">
         <div>
