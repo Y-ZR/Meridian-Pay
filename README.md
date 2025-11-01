@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# Meridian Pay
 
-## Project info
+A modern cross-border payment platform for sending money from Singapore to Southeast Asia.
 
-**URL**: https://lovable.dev/projects/52a69df0-a82f-4b1b-882f-5243ba5ad335
+## Overview
 
-## How can I edit this code?
+Meridian Pay streamlines international money transfers with real-time exchange rates, transparent fees, and comprehensive payment tracking. Built for individuals and businesses sending money from Singapore to the Philippines and Malaysia.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Cross-Border Payments**: Send SGD to PHP (Philippines) and MYR (Malaysia)
+- **Real-Time Rates**: Live exchange rates with transparent fee breakdown
+- **Beneficiary Management**: Save and manage recipient information
+- **Payment Tracking**: Monitor payment status from quote to delivery
+- **Dashboard Analytics**: View payment volume, fees, and performance metrics
+- **Payment History**: Complete transaction history with detailed status tracking
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/52a69df0-a82f-4b1b-882f-5243ba5ad335) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **UI Framework**: shadcn/ui + Tailwind CSS
+- **Routing**: React Router v6
+- **State Management**: Zustand
+- **Forms**: React Hook Form + Zod
+- **Charts**: Recharts
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js 18+ (or Bun runtime)
+- npm, yarn, or bun package manager
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+```bash
+npm run dev        # Start development server
+npm run build      # Build for production
+npm run preview    # Preview production build
+npm run lint       # Run ESLint
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/52a69df0-a82f-4b1b-882f-5243ba5ad335) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```
+src/
+├── components/     # Reusable UI components
+├── pages/          # Page components (Dashboard, Payments, etc.)
+├── lib/            # Utility functions (fees, rates, utils)
+├── store/          # Zustand state management
+├── types/          # TypeScript type definitions
+└── hooks/          # Custom React hooks
+```
