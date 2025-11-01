@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#2563eb"/>
+  
+  <!-- Dollar/Payment symbol -->
+  <path d="M32 16v4m0 24v4" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- S curve for money -->
+  <path d="M24 26c0-3 2-5 6-5h6c3 0 5 1.5 5 4.5s-2 4.5-5 4.5H26c-3 0-5 1.5-5 4.5s2 4.5 5 4.5h8c4 0 6-2 6-5" 
+        stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Transfer arrow accent -->
+  <path d="M45 22l4 0m-4 0l2-2m-2 2l2 2" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19 42l-4 0m4 0l-2 2m2-2l-2-2" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
